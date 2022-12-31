@@ -1,0 +1,16 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html",
+  "/hizmetlerimiz": "pages/hizmetlerimiz.html",
+  "/hakkimizda": "pages/hakkimizda.html",
+  "/ekibimiz": "pages/ekibimiz.html",
+  "/": "pages/index.html",
+  "/legal/cookies": "pages/legal/cookies.html",
+  "/legal/privacy-policy": "pages/legal/privacy-policy.html",
+  "/legal/terms-of-services": "pages/legal/terms-of-services.html",
+  "/legal/terms-and-conditions": "pages/legal/terms-and-conditions.html",
+  "/iletisim": "pages/iletisim.html",
+  "/sitemap.xml": "pages/sitemap.xml.js"
+}
