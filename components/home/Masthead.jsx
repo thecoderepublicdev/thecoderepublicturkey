@@ -4,6 +4,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import Select from 'react-select'
 import Link from "next/link";
 import * as Yup from 'yup';
+import "yup-phone-lite";
 import MastheadSection from "@components/layout/Masthead";
 
 function CollectOfferForm(values, { setSubmitting, resetForm }) {
@@ -123,7 +124,7 @@ function OfferForm() {
                 firstName: Yup.string().required('İsim belirtmek zorunludur.'),
                 lastName: Yup.string().required('Soyisim belirtmek zorunludur.'),
                 email: Yup.string().email('Lütfen geçerli bir email adresi giriniz.').required('E-Posta adresi belirtmek zorunludur.'),
-                phone: Yup.string().required('Telefon Numarası belirtmek zorunludur.'),
+                phone: Yup.string().phone("TR", 'Lütfen Türkiye Cumhuriyeti için geçerli bir telefon numarası girin').required('Telefon Numarası belirtmek zorunludur.'),
                 message: Yup.string()
             }),
             onSubmit: (values, { setSubmitting, resetForm }) => {
