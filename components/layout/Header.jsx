@@ -20,7 +20,7 @@ function Navigation() {
 export default function Header() {
     return(
         <header>
-            <div className='max-w-screen-xl mx-auto p-4 flex justify-between'>
+            <div className='xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto p-4 flex justify-between'>
                 <Logo/>
                 <Navigation/>
             </div>

@@ -13,7 +13,7 @@ const HeaderData = {
         {
             title: 'Hakkımızda',
             path: "/hakkimizda",
-            disabled: false,
+            disabled: true,
         },
         {
             title: 'İletişim',

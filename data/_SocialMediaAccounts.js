@@ -16,12 +16,12 @@ const SocialMediaAccounts = [
     {
         platform: "Instagram",
         icon: <InstagramLogo/>,
-        url: "https://www.instagram.com/thecoderepublic"
+        url: "https://www.instagram.com/thecoderepublicturkey"
     },
     {
         platform: "Threads",
         icon: <ThreadsLogo/>,
-        url: "https://www.threads.net/thecoderepublic"
+        url: "https://www.threads.net/thecoderepublicturkey"
     },
     {
         platform: "Twitter",

@@ -47,6 +47,17 @@ const ReferencesData = [
         brand: "Bakery Expo Kazakhstan",
         url: "https://bakeryexpo.kz/?utm_source=thecoderepublic",
     },
+    {   
+        show: true,
+        logo: require('@references/blackbear.png').default.src,
+        brand: "BlackBear Motorcycle",
+    },
+    {   
+        show: true,
+        logo: require('@references/biseo.png').default.src,
+        brand: "BiSEO Dijital Pazarlama",
+        url: "https://biseo.com.tr/?utm_source=thecoderepublic",
+    },
 ];
 
 export default ReferencesData;

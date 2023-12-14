@@ -4,6 +4,6 @@
 
 @layer base {
     body {
-        @apply bg-[#F6F3F0]
+        @apply bg-brand-secondary
     }
 }

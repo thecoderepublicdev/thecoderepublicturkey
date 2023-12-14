@@ -1,8 +1,32 @@
 const SERVICES = [
     {
         id: 1,
+        path: '/hizmetlerimiz/kurumsal-internet-sitesi',
         title: "Kurumsal İnternet Sitesi",
-        description: "Potansiyel müşterilerinize ulaşın ve marka bilinirliği oluşturun",
+        description: "Kurumsal internet sitesi ile markanızın ön plana çıkarın; potansiyel müşterilerinize ulaşın, marka bilinirliği yaratın ve cironuzu yükseltin.",
+        thumbnail: require('@images/internet-sitesi.png'),
+        features: [
+            {
+                icon: '',
+                label: 'Meta Pixel Entegrasyonu'
+            },
+            {
+                icon: '',
+                label: 'Tüm Arama Motorlarına Entegrasyon'
+            },
+            {
+                icon: '',
+                label: 'Markaya Özel Tasarım'
+            },
+            {
+                icon: '',
+                label: 'Optimizasyon'
+            }
+        ],
+        dimensions: {
+          width: require('@images/internet-sitesi.png').default.width,
+          height: require('@images/internet-sitesi.png').default.height,
+        },
         content: `
         # Kurumsal İnternet Sitesi: Dijital Başarının Anahtarı
 
@@ -28,6 +52,34 @@ const SERVICES = [
 
         Kısacası, kurumsal bir internet sitesi, günümüz iş dünyasında başarıya ulaşmanın vazgeçilmez bir parçasıdır. Dijital çağda rekabetin arttığı bir ortamda, çevrimiçi varlık, şirketinizin büyüme potansiyelini maksimize etmenin anahtarıdır.
         `,
+    },
+    {
+        id: 7,
+        title: 'E-Ticaret Sitesi',
+        description: 'Markanıza özgü tasarımıyla, güvenilir ödeme altyapısıyla ürünlerinizi güncel teknolojileri kullanarak 7/24 satın ve potansiyel müşterilerinize ulaşarak cironuzu arttırın',
+        thumbnail: require('@images/e-ticaret-sitesi.png'),
+        dimensions: {
+          width: require('@images/e-ticaret-sitesi.png').default.width,
+          height: require('@images/e-ticaret-sitesi.png').default.height,
+        },
+        features: [
+            {
+                icon: '',
+                label: 'Meta Pixel Entegrasyonu'
+            },
+            {
+                icon: '',
+                label: 'Tüm Arama Motorlarına Entegrasyon'
+            },
+            {
+                icon: '',
+                label: 'Markaya Özel Tasarım'
+            },
+            {
+                icon: '',
+                label: 'Optimizasyon'
+            }
+        ],
     },
     {
         id: 2,
@@ -93,6 +145,24 @@ const SERVICES = [
         id: 4,
         title: 'Grafik Tasarım',
         description: 'Markanızın ihtiyaç duyduğu tüm dijital ve baskılı tasarım ihtiyaçları, profesyonel ekibimiz tarafından gerçekleştirilir.',
+        features: [
+            {
+                icon: '',
+                label: 'Meta Pixel Entegrasyonu'
+            },
+            {
+                icon: '',
+                label: 'Tüm Arama Motorlarına Entegrasyon'
+            },
+            {
+                icon: '',
+                label: 'Markaya Özel Tasarım'
+            },
+            {
+                icon: '',
+                label: 'Optimizasyon'
+            }
+        ],
         content: `
         # Grafik Tasarım: Görsel İletişimin Gücü
 
@@ -152,7 +222,13 @@ const SERVICES = [
     {
         id: 6,
         title: 'Mobil Uygulama Geliştirme',
+        path: '/hizmetlerimiz/mobil-uygulama',
         description: 'Şirketinizin/markanızın ihtiyaç duyduğu mobil uygulamayı; günümüz teknolojileri ve kullanıcı erişilebilirliği yüksek tasarımıyla yayınlamaya ne dersiniz?',
+        thumbnail: require('@images/mobil-uygulama.png'),
+        dimensions: {
+          width: require('@images/mobil-uygulama.png').default.width,
+          height: require('@images/mobil-uygulama.png').default.height,
+        },
         content: `
         # Mobil Uygulama Geliştirme: Kullanıcılarla Daha Yakın İletişim
 

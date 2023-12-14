@@ -4,7 +4,7 @@
     "paths": {
       "@data/*": ["data/*"],
       "@src/*": ["src/*"],
-      "@images/*": ["images/*"],
+      "@images/*": ["src/images/*"],
       "@logos/*": ["src/logos/*"],
       "@references/*": ["src/logos/references/*"],
       "@thumbnails/*": ["thumbnails/*"],
@@ -12,6 +12,8 @@
       "@components/*": ["components/*"],
       "@layout/*": ["components/layout/*"],
       "@home/*": ["components/home/*"],
+      "@templates/*": ["templates/*"],
+      "@email-templates/*": ["templates/email/*"],
       "@shared/*": ["components/shared/*"]
     }
   }
