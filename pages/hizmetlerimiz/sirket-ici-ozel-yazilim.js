@@ -20,7 +20,6 @@ const OurCustomers = {
 
 export default function handle() {
     const MastheadPhoto = require('@images/şirket-içi-özel-yazılım.png');
-    console.log(MastheadPhoto);
     return(
         <Layout>
             <Section>
@@ -44,6 +43,8 @@ export default function handle() {
                         </MastheadSection.Left>
                         <MastheadSection.Right>
                             <Image
+                                loading="lazy"
+                                blurDataURL={MastheadPhoto.blurDataURL}
                                 className="p-6 pb-0 overflow-hidden object-cover object-top max-h-[500px] bg-brand-primary/5 rounded-xl"
                                 src={MastheadPhoto}
                                 width={MastheadPhoto.default.width}

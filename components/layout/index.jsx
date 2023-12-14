@@ -1,4 +1,4 @@
-import React from "react";
+import {Fragment} from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Head from 'next/head';
@@ -10,7 +10,7 @@ export default function Layout({children}) {
     const currentPage = MetaData.filter(page => page.slug === router.asPath)[0];
     
     return(
-        <React.Fragment>
+        <Fragment>
             <Head>
                 <title>{currentPage?.title}</title>
                 <meta name="description" content={currentPage?.description}/>
@@ -22,7 +22,6 @@ export default function Layout({children}) {
                 <meta name="owner" content="The Code Republic"/>
                 <meta name="language" content="TR"/>
                 <meta name='robots' content='index,follow'/>
-
                 <meta name='og:title' content={currentPage?.title}/>
                 <meta name='og:description' content={currentPage?.description}/>
                 <meta name='og:site_name' content="The Code Republic"/>
@@ -32,6 +31,6 @@ export default function Layout({children}) {
             <Header/>
                 {children}
             <Footer/>
-        </React.Fragment>
+        </Fragment>
     )
 }

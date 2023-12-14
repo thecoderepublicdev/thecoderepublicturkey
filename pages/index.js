@@ -9,9 +9,9 @@ export default function App() {
     <Layout>
       <Masthead/>
       <LogoCloud/>
-      {SERVICES.map((service, key) => (
+      {SERVICES.map((service, key) => service.thumbnail && (
         <ServiceSection key={key}>
-          <ServiceSection.Thumbnail alt={service.title} width={service.dimensions.width} height={service.dimensions.height}>
+          <ServiceSection.Thumbnail alt={service.title} width={service?.dimensions?.width} height={service?.dimensions?.height}>
             {service.thumbnail}
           </ServiceSection.Thumbnail>
           <ServiceSection.Title>
