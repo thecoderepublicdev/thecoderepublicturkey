@@ -29,7 +29,6 @@ export default function ContactUs() {
             <Section>
                 <Section.Content>
                     <div className="h-[300px] grid content-center bg-white rounded-xl p-4 overflow-hidden">
-
                         <div className="my-4 px-4 lg:p-0 xl:p-0 2xl:p-0 grid gap-4">
                             <h1 className="text-7xl font-bold text-brand-primary">Size nasıl yardımcı olabiliriz?</h1>
                             <p className="text-gray-500 text-xl">The Code Republic üç ülkedeki merkezimizle dünyanın dört bir yanında yazılımsal hizmetler sunuyoruz. Peki sizlere nasıl yardımcı olabiliriz?</p>

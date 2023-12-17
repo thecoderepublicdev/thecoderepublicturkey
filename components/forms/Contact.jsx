@@ -115,12 +115,14 @@ export default function ContactForm({subject}) {
             }),
             onSubmit: async (values, { setSubmitting, resetForm }) => {
                 setSubmitting(true);
-                console.log(values);
                 
                 await axios({
                     method: 'POST',
-                    url: '/api/contact',
-                    data: values
+                    url: '/api/send-mail',
+                    data: {
+                        formType: 'contact',
+                        fields: values
+                    }
                 })
                 .then((res) => {
                     console.log("response", res.data)

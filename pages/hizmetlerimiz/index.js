@@ -1,14 +1,22 @@
-import Layout from "@components/layout";
 import Section from "@components/layout/Section";
 import ServiceBox from "@components/services/ServiceBox";
 import CallToAction from "@components/shared/CallToAction";
 import SERVICES from "@data/_Services";
+import dynamic from 'next/dynamic';
 
+const Layout = dynamic(() => import('@components/layout/index'), {
+    loading: () => <p className="w-full h-full text-center">Lütfen bekleyin</p>
+});
 export default function ServicesPage() {
+
     return(
         <Layout>
             <Section>
                 <Section.Content>
+                    <div className="p-6 grid gap-4">
+                        <h1 className="font-bold text-4xl">Sunduğumuz Hizmetler</h1>
+                        <p itemprop="description" className="text-black/50">The Code Republic olarak firmalara/markalara ve bireysellere; <strong>Kurumsal İnternet sitesi</strong>, <strong>E-Ticaret Sitesi</strong> ve <strong>Mobil Uygulama Geliştirme</strong> başta olmak üzere Grafik Tasarım, Logo Tasarımı, <strong>UI & UX Tasarım</strong> alanlarında da hizmetler sunmaktayız.</p>
+                    </div>
                     <CallToAction>
                         <CallToAction.Image>{require('@images/şirket-içi-özel-yazılım.png')}</CallToAction.Image>
                         <CallToAction.Title>Şirket içi Özel Yazılım ile Rakiplerinizin Önüne Geçin!</CallToAction.Title>

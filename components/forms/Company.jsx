@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, Fragment } from 'react';
 import * as Yup from 'yup';
 import "yup-phone-lite";
 import { ErrorMessage, Field, Form, Formik } from "formik";
@@ -28,7 +28,6 @@ const CompanySizeOptions = [
         value: "20.000'den fazla", 
     }
 ]
-
 
 function FormFields({ errors, status, touched, isSubmitting, setFieldValue }) {
     const Fields = [
@@ -80,7 +79,7 @@ function FormFields({ errors, status, touched, isSubmitting, setFieldValue }) {
         {
             customRender: true,
             customRenderContent: () => (
-                <React.Fragment>
+                <Fragment>
                     <Field
                         id="companySize"
                         name="companySize"
@@ -98,7 +97,7 @@ function FormFields({ errors, status, touched, isSubmitting, setFieldValue }) {
                         ))}
                     </Field>
                     <ErrorMessage name="companySize" component="div" className="text-red-500 mt-2"/>
-                </React.Fragment>
+                </Fragment>
             )
         }
     ];
@@ -153,19 +152,18 @@ export default function CompanyContactForm() {
 
                 await axios({
                     method: 'POST',
-                    url: '/api/incorp',
-                    data: values
+                    url: '/api/send-mail',
+                    data: {
+                        formType: 'incorp',
+                        fields: values
+                    }
                 })
                 .then((res) => {
-                    console.log("response", res.data)
                     setFormSentStatus(true)
                     setSubmitting(false)
-                    console.log('IF_FORM_SENDED', IF_FORM_SENDED)
                 })
                 .catch((err) => {
                     setFormSentStatus(false)
-                    console.log('IF_FORM_SENDED', IF_FORM_SENDED)
-                    console.log("error", err)
                 })
             }
         }
@@ -183,7 +181,6 @@ export default function CompanyContactForm() {
                     </Alert.Description>
                 </Alert>
             ) : (props) => <FormFields {...props} />}
-            
         </Formik>
     )
 }
