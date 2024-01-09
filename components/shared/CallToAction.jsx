@@ -67,7 +67,7 @@ export default function CallToAction({children}) {
                             <CompanyContactForm/>
                         </Modal.Content>
                     </Modal>
-                    <a itemprop="url" href="/hizmetlerimiz/sirket-ici-ozel-yazilim" className="text-sm px-6 py-4 hover:bg-brand-primary/25 rounded-full font-semibold leading-6 flex align-center items-center content-center text-brand-primary">
+                    <a itemProp="url" href="/hizmetlerimiz/sirket-ici-ozel-yazilim" className="text-sm px-6 py-4 hover:bg-brand-primary/25 rounded-full font-semibold leading-6 flex align-center items-center content-center text-brand-primary">
                         <label>
                             Detaylı Bilgi Al
                         </label>

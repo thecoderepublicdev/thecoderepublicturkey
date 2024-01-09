@@ -28,7 +28,7 @@ const MetaData = [
         title: 'Hakkımızda | The Code Republic',
         description: 'The Code Republic; Tallinn, Estonya merkezli Türk bir yazılım şirketidir.',
         tags: 'the code republic, yazılım şirketi, estonya, tallinn, avrupa merkezli yazılım şirketleri, internet sitesi, mobil uygulama'
-    }
+    },
 ]
 
 export default MetaData;
