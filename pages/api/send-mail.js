@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 
 export default async function handler(req, res) {
     const { formType, fields } = await req.body;
-
+    console.log("Form Type:11",fields)
     const MailTemplate = await dynamic(() => {
         switch(formType) {
             case 'contact':

@@ -2,6 +2,7 @@ import { createElement } from "react";
 import Image from 'next/image';
 import Modal from "@components/shared/Modal";
 import React from "react";
+import ContactForm from "@components/forms/Contact";
 
 function Thumbnail({width, height, alt, children}) {
     return(
@@ -35,7 +36,7 @@ export default function ServiceSection({children}) {
         Thumbnail: children.filter(c => c.type === Thumbnail),
         Description: children.filter(c => c.type === Description),
     }
-
+    console.log(Childrens.Title)
     return(
         <section className="grid place-items-center w-full mx-auto">
             <div className="py-8 px-8 mx-auto max-w-screen-2xl lg:py-8 lg:px-4">
@@ -50,9 +51,9 @@ export default function ServiceSection({children}) {
 
                         <Modal>
                             <Modal.Button className="w-fit p-4 min-w-[300px] bg-brand-primary text-white rounded-xl">Teklif Al</Modal.Button>
-                            <Modal.Title>{Childrens.Title.value} için teklif alın</Modal.Title>
+                            <Modal.Title>{Childrens.Title.map((title) => title.props.children)} İçin Teklif Alın</Modal.Title>
                             <Modal.Content>
-                                <h1>bla bla</h1>
+                                <ContactForm />
                             </Modal.Content>
                         </Modal>
                     </div>
