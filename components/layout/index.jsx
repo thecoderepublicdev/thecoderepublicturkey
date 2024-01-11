@@ -6,8 +6,12 @@ import MetaData from "@data/_MetaData";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 
-const Footer = dynamic(() => import('./Footer'))
-const Header = dynamic(() => import('./Header'))
+const Footer = dynamic(() => import('./Footer'), {
+    loading: () => (<p>Header</p>)
+})
+const Header = dynamic(() => import('./Header'), {
+    loading: () => (<p>Header</p>)
+})
 
 export default function Layout({children}) {
     const router = useRouter();

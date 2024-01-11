@@ -15,7 +15,7 @@ const Features = ({children}) => {
     const isCurrentViewMobile = isMobile()
 
     const Content = ({...props}) => {
-        console.log("c", (!isCurrentViewMobile))
+
         return(
             <React.Fragment>
                 <Disclosure.Button open={props.open} className="py-2 visible 2xl:hidden xl:hidden lg:hidden ">Paket içeriği</Disclosure.Button>

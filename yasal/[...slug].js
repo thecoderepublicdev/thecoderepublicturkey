@@ -8,8 +8,6 @@ import Policies from "@data/_Policies";
 export default function handle() {
     const router = useRouter();
     const IS_CURRENT_DOCUMENT = Policies.find(p => p.slug === router.query.slug)
-    console.log(IS_CURRENT_DOCUMENT);
-    console.log(router.query.slug);
 
     return(
         <Layout>

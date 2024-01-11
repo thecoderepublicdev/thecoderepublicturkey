@@ -36,7 +36,7 @@ export default function ServiceSection({children}) {
         Thumbnail: children.filter(c => c.type === Thumbnail),
         Description: children.filter(c => c.type === Description),
     }
-    console.log(Childrens.Title)
+    
     return(
         <section className="grid place-items-center w-full mx-auto">
             <div className="py-8 px-8 mx-auto max-w-screen-2xl lg:py-8 lg:px-4">

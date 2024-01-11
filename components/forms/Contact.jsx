@@ -125,15 +125,11 @@ export default function ContactForm({subject}) {
                     }
                 })
                 .then((res) => {
-                    console.log("response", res.data)
                     setFormSentStatus(true)
                     setSubmitting(false)
-                    console.log('IF_FORM_SENDED', IF_FORM_SENDED)
                 })
                 .catch((err) => {
                     setFormSentStatus(false)
-                    console.log('IF_FORM_SENDED', IF_FORM_SENDED)
-                    console.log("error", err)
                 })
             }
         }

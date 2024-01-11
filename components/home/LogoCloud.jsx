@@ -3,17 +3,17 @@ import Image from 'next/image';
 
 export default function LogoCloud() {
     return(
-        <div className="bg-black/5 py-6">
-            <div className="px-10 flex gap-4 justify-between align-center items-center content-center">
+        <div className="xl:max-w-screen-xl 2xl:max-w-screen-2xl rounded-xl mx-auto overflow-hidden">
+            <div className="grid grid-cols-5 gap-4 justify-between align-center items-center content-center">
                 {References.map((reference, key) => reference.show && (
-                    <div key={key} className="w-full max-h-[120px] rounded-xl grid place-content-center place-items-center">
+                    <div key={key} className="w-30 p-4 bg-black/5 rounded-xl grid place-content-center place-items-center">
                         <Image
                             key={key}
                             width={600}
                             height={150}
                             loading="lazy"
                             blurDataURL={reference.logo.blurDataURL}
-                            className="grayscale scale-120"
+                            className="hover:grayscale-0 grayscale scale-75"
                             src={reference.logo}
                             alt={reference.brand}
                         />
