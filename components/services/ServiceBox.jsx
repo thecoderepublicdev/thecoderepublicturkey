@@ -87,7 +87,7 @@ export default function ServiceBox({url, children}) {
                     <Modal.Title></Modal.Title>
 
                     <Modal.Content>
-                        <ContactForm subject={Childrens.Name.value}/>
+                        <ContactForm formType="SERVICE_OFFER" isOfferForm={true} selectedServiceName={Childrens.Name.value}/>
                     </Modal.Content>
                 </Modal>
             </div>

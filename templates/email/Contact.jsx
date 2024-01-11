@@ -13,7 +13,15 @@ import {
     Text,
 } from '@react-email/components';
 
-export default function ContactMail({firstName, lastName, mail, phone, message}) {
+export default function ContactMail({isOfferForm, selectedService = null, firstName, lastName, mail, phone, message}) {
+    const MailHeading = () => {
+        if(isOfferForm) {
+            return `${firstName}, ${selectedService} için iletişime geçmek istiyor`
+        } else {
+            return `${firstName} iletişime geçmek istiyor!`
+        }
+    }
+    
     return(
         <Html>
             <Head/>
@@ -25,7 +33,7 @@ export default function ContactMail({firstName, lastName, mail, phone, message})
                     <Container>
                         <Section className='min-w-[700px] bg-white rounded-xl p-6 my-6'>
                             <Heading>
-                                {`${firstName} iletişime geçmek istiyor!`}
+                                {MailHeading}
                             </Heading>
                             <Section className='grid gap-4'>
                                 <Row className='grid gap-4'>

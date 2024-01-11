@@ -5,7 +5,8 @@ import dynamic from 'next/dynamic';
 
 
 export default async function handler(req, res) {
-    const { formType, fields } = await req.body;
+    const { formType, fields, isOfferForm, selectedServiceName } = await req.body;
+
     const MailTemplate = await dynamic(() => {
         switch(formType) {
             case 'contact':
@@ -18,7 +19,7 @@ export default async function handler(req, res) {
 
     switch (req.method) {
         case 'POST':
-            const mailBody = await render(<MailTemplate {...fields}/>, {pretty: true})
+            const mailBody = await render(<MailTemplate isOfferForm={isOfferForm} selectedServiceName={selectedServiceName} {...fields}/>, {pretty: true})
 
             const transporter = nodemailer.createTransport({
                 service: 'gmail',

@@ -53,7 +53,7 @@ export default function ServiceSection({children}) {
                             <Modal.Button className="w-fit p-4 min-w-[300px] bg-brand-primary text-white rounded-xl">Teklif Al</Modal.Button>
                             <Modal.Title>{Childrens.Title.map((title) => title.props.children)} İçin Teklif Alın</Modal.Title>
                             <Modal.Content>
-                                <ContactForm />
+                                <ContactForm formType="SERVICE_OFFER" isOfferForm={true} selectedServiceName={Childrens.Title.map((title) => title.props.children)} />
                             </Modal.Content>
                         </Modal>
                     </div>

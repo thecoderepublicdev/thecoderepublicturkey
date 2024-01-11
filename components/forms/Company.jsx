@@ -6,28 +6,7 @@ import classNames from "classnames";
 import axios from 'axios';
 import Alert from '@components/shared/Alert';
 
-const CompanySizeOptions = [
-    {
-        text: "Şirketinizin çalışan sayısı",
-        value: "",
-    },
-    {
-        text: "1-10",
-        value: "1-10",
-    },
-    {
-        text: "50-100",
-        value: "50-100",
-    },
-    {
-        text: "1.000 - 10.000",
-        value: "1.000 - 10.000",
-    },
-    {
-        text: "20.000'den fazla",
-        value: "20.000'den fazla", 
-    }
-]
+
 
 function FormFields({ errors, status, touched, isSubmitting, setFieldValue }) {
     const Fields = [
@@ -126,7 +105,7 @@ function FormFields({ errors, status, touched, isSubmitting, setFieldValue }) {
     )
 }
 
-export default function CompanyContactForm() {
+export default function CompanyContactForm({formType}) {
     const [IF_FORM_SENDED, setFormSentStatus] = useState();
 
     const Props = {

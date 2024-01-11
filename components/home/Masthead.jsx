@@ -25,7 +25,7 @@ export default function Masthead() {
                                         <p className="text-black/50">Bizimle çalışmayı düşündüğünüz için teşekkür ederiz, hiç vakit kaybetmeden fiyat teklifi alın ve çalışmalara başlayalım</p>
                                     </div>
 
-                                    <ContactForm/>
+                                    <ContactForm isOfferForm={false} formType={"contact"}/>
                                 </div>
                             </Modal.Content>
                         </Modal>
