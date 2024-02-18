@@ -1,3 +1,4 @@
+import Title from "@components/layout/Title";
 import { References } from "@data/index";
 import Image from 'next/image';
 
@@ -13,7 +14,6 @@ export default function LogoCloud() {
                             height={150}
                             loading="lazy"
                             blurDataURL={reference.logo.blurDataURL}
-                            className="hover:grayscale-0 grayscale scale-75"
                             src={reference.logo}
                             alt={reference.brand}
                         />

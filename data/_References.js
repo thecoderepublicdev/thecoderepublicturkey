@@ -19,9 +19,9 @@ const ReferencesData = [
     },
     {   
         show: true,
-        logo: require('@references/lift-expo.png').default.src,
-        brand: "Lift Expo Kazakhstan",
-        url: "https://liftexpo.kz/?utm_source=thecoderepublic",
+        logo: require('@references/ocean-plus-digital.png').default.src,
+        brand: "Ocean Plus Digital",
+        url: "https://oceanplusdigital.com/?utm_source=thecoderepublic",
     },
     {   
         show: true,
