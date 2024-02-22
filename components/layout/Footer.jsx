@@ -24,7 +24,7 @@ export default function Footer() {
                             <label className='block font-bold text-lg text-black mb-4'>{block.title}</label>
                             <ul className='grid gap-2'>
                                 {block.links.map(link => (
-                                    <li legacyBehavior key={link.display_text} className="text-black flex justify-between hover:text-brand-primary !cursor-pointer group py-2 opacity-50 hover:opacity-100 transition-all transition:ease-in-out">
+                                    <li key={link.display_text} className="text-black flex justify-between hover:text-brand-primary !cursor-pointer group py-2 opacity-50 hover:opacity-100 transition-all transition:ease-in-out">
                                         <Link href={link.url}>
                                             {link.display_text}
                                         </Link>

@@ -5,6 +5,7 @@
       "@data/*": ["data/*"],
       "@src/*": ["src/*"],
       "@images/*": ["src/images/*"],
+      "@publicimages/*": ["public/images/*"],
       "@logos/*": ["src/logos/*"],
       "@references/*": ["src/logos/references/*"],
       "@thumbnails/*": ["thumbnails/*"],

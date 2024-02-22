@@ -21,6 +21,7 @@ export default function ServicesPage() {
                         <CallToAction.Image>{require('@images/şirket-içi-özel-yazılım.png')}</CallToAction.Image>
                         <CallToAction.Title>Şirket içi Özel Yazılım ile Rakiplerinizin Önüne Geçin!</CallToAction.Title>
                         <CallToAction.Description>Ücretsiz toplantı talep edin; şirketinizin işleyişinizi en ince ayrıntısına kadar not alarak hangi alanlarda hangi dijital dönüşümleri yapabileceğimizi analiz ederek size sonuçları iletelim.</CallToAction.Description>
+                        <CallToAction.Link href="/hizmetlerimiz/sirket-ici-ozel-yazilim">Detaylı Bilgi Al</CallToAction.Link>
                     </CallToAction>
 
                     <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 gap-4 my-10">
@@ -35,6 +36,12 @@ export default function ServicesPage() {
                             </ServiceBox>
                         ))}
                     </div>
+                    <CallToAction>
+                        <CallToAction.Image>{require('@publicimages/google-bimi-masthead.png')}</CallToAction.Image>
+                        <CallToAction.Title>Gmail Onaylanmış Hesap</CallToAction.Title>
+                        <CallToAction.Description>"Markanız, siz orada olmadığınızda insanların sizin hakkınızda söyledikleridir." Bu nedenle markanızın dijital kanallarını dolandırıcılığa karşı korumak çok önemlidir. Müşterilerinizle güven oluşturmak birinci görevdir. Google Doğrulanmış Marka Sertifikanızı hemen alın ve markanızın değerini korurken prestijini katlayın.</CallToAction.Description>
+                        <CallToAction.Link href="/hizmetlerimiz/gmail-onaylanmis-hesap">Detaylı Bilgi Al</CallToAction.Link>
+                    </CallToAction>
                 </Section.Content>
             </Section>
         </Layout>

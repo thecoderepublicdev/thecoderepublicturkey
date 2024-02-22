@@ -170,6 +170,7 @@ function FormFieldsView({ formType, errors, status, touched, isSubmitting, setFi
     const selectedFormFields = useMemo(() => {
         switch (formType) {
             case 'SERVICE_OFFER':
+                return FormFields.Contact;
             case 'CONTACT':
                 return FormFields.Contact;
             case 'INCORP':
@@ -194,7 +195,7 @@ function FormFieldsView({ formType, errors, status, touched, isSubmitting, setFi
                     />
                     <ErrorMessage name={field.name} component="div" className="text-red-500 mt-2"/>
                </div> 
-            ) : field.customRenderContent)}
+            ) : <div key={key} className='grid'>{field.customRenderContent}</div>)}
 
             <button type="submit" className="p-4 rounded-xl bg-brand-primary text-center font-bold text-lg text-white disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed disabled:opacity-50" disabled={isSubmitting}>
                 {isSubmitting ? 'Lütfen Bekleyin...' : 'Gönder'}
@@ -203,7 +204,7 @@ function FormFieldsView({ formType, errors, status, touched, isSubmitting, setFi
     )
 }
 
-export default function ContactForm({formType, selectedServiceName}) {
+export default function ContactForm({formType, selectedServiceName = null, isOfferForm}) {
     const [IF_FORM_SENDED, setFormSentStatus] = useState();
     
     const Props = {
@@ -218,13 +219,12 @@ export default function ContactForm({formType, selectedServiceName}) {
             validationSchema: undefined,
             onSubmit: async (values, { setSubmitting, resetForm }) => {
                 setSubmitting(true);
-
                 await axios({
                     method: 'POST',
                     url: '/api/send-mail',
                     data: {
                         formType: formType,
-                        fields: fields,
+                        fields: values,
                         isOfferForm: isOfferForm,
                         selectedServiceName: selectedServiceName
                     }

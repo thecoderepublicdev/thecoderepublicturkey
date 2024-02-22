@@ -48,7 +48,6 @@ export default function ServiceSection({children}) {
                     <div className="flex flex-col gap-4">
                         {Childrens.Title}
                         {Childrens.Description}
-
                         <Modal>
                             <Modal.Button className="w-fit p-4 min-w-[300px] bg-brand-primary text-white rounded-xl">Teklif Al</Modal.Button>
                             <Modal.Title>{Childrens.Title.map((title) => title.props.children)} İçin Teklif Alın</Modal.Title>

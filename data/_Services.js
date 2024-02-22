@@ -55,6 +55,7 @@ const SERVICES = [
     },
     {
         id: 7,
+        path:'/hizmetlerimiz/e-ticaret-sitesi',
         title: 'E-Ticaret Sitesi',
         description: 'Markanıza özgü tasarımıyla, güvenilir ödeme altyapısıyla ürünlerinizi güncel teknolojileri kullanarak 7/24 satın ve potansiyel müşterilerinize ulaşarak cironuzu arttırın',
         thumbnail: require('@images/e-ticaret-sitesi.png'),
@@ -83,6 +84,7 @@ const SERVICES = [
     },
     {
         id: 2,
+        path:'/hizmetlerimiz/e-ticaret-internet-sitesi',
         title: "E-Ticaret İnternet Sitesi",
         description: "Ürünlerinizi 7/24 internetteki tüm potansiyel müşterilerinize ulaştırın ve cironuzu yükseltin",
         content: `
@@ -113,6 +115,7 @@ const SERVICES = [
     },
     {
         id: 3,
+        path:'/hizmetlerimiz/ui-ux-tasarim',
         title: 'UI & UX Tasarım',
         description: 'Projenizin günümüz tasarım anlayışı ve kullanıcı erişebilirliği kurallarına uygun tasarımı olsun ister misiniz?',
         content: `
@@ -143,6 +146,7 @@ const SERVICES = [
     },
     {
         id: 4,
+        path:'/hizmetlerimiz/grafik-tasarim',
         title: 'Grafik Tasarım',
         description: 'Markanızın ihtiyaç duyduğu tüm dijital ve baskılı tasarım ihtiyaçları, profesyonel ekibimiz tarafından gerçekleştirilir.',
         features: [
@@ -191,6 +195,7 @@ const SERVICES = [
     },
     {
         id: 5,
+        path:'/hizmetlerimiz/marka-yonetimi',
         title: 'Marka Yönetimi',
         description: 'Markanızın tüm dijital süreçlerini profesyonel ellere bırakın; sizler üretimle ilgilenirken biz marka bilinirliğini en üst düzeye çıkarıyor olacağız.',
         content: `
@@ -222,7 +227,7 @@ const SERVICES = [
     {
         id: 6,
         title: 'Mobil Uygulama Geliştirme',
-        path: '/hizmetlerimiz/mobil-uygulama',
+        path: '/hizmetlerimiz/mobil-uygulama-gelistirme',
         description: 'Şirketinizin/markanızın ihtiyaç duyduğu mobil uygulamayı; günümüz teknolojileri ve kullanıcı erişilebilirliği yüksek tasarımıyla yayınlamaya ne dersiniz?',
         thumbnail: require('@images/mobil-uygulama.png'),
         dimensions: {

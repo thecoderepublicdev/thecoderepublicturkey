@@ -1,25 +1,32 @@
 import { render } from '@react-email/render';
 import nodemailer from "nodemailer";
-import ContactMail from "@templates/email/Contact";
 import dynamic from 'next/dynamic';
+import ContactMail from '@templates/email/Contact';
 
 
 export default async function handler(req, res) {
     const { formType, fields, isOfferForm, selectedServiceName } = await req.body;
 
-    const MailTemplate = await dynamic(() => {
-        switch(formType) {
-            case 'contact':
-                import('@templates/email/Contact')
-                break;
-            case 'incorp':
-                import('@templates/email/InCorp');
-        }
-    })
+    let MailTemplateModule;
+    switch (formType) {
+        case 'SERVICE_OFFER':
+            MailTemplateModule = await import('@templates/email/Contact');
+        case 'contact':
+            MailTemplateModule = await import('@templates/email/Contact');
+            break;
+        case 'incorp':
+            MailTemplateModule = await import('@templates/email/InCorp');
+            break;
+        default:
+            MailTemplateModule = await import('@templates/email/Contact');
+            break;
+    }
+    
+    const MailTemplate = MailTemplateModule.default;
 
     switch (req.method) {
         case 'POST':
-            const mailBody = await render(<MailTemplate isOfferForm={isOfferForm} selectedServiceName={selectedServiceName} {...fields}/>, {pretty: true})
+            const mailBody = await render(<MailTemplate isOfferForm={isOfferForm} selectedServiceName={selectedServiceName[0]} {...fields} />, {pretty: true})
 
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
@@ -38,7 +45,7 @@ export default async function handler(req, res) {
         
             transporter.sendMail(mailOptions, function (error, info) {
                 if (error) {
-                    console.error(error);
+                    console.error("Mail Gönderme Hatası",error);
                     res.status(500).json({success: false, response: error});
                 } else {
                     res.status(200).json({success: true, response: info});

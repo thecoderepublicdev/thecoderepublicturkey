@@ -32,11 +32,22 @@ const Description = ({children}) => {
     )
 }
 
+
+const Link = ({children, href}) => {
+    return(
+        <a itemProp="url" href={href} title={children} className="text-sm px-6 py-4 hover:bg-brand-primary/25 rounded-full font-semibold leading-6 flex align-center items-center content-center text-brand-primary">
+            {children}
+            <span className='material-symbols-outlined'>chevron_right</span>
+        </a>
+    )
+}
+
 export default function CallToAction({children}) {
     const Childrens = {
         Thumbnail: children.filter(c => c.type === Thumbnail),
         Title: children.filter(c => c.type === Title),
         Description: children.filter(c => c.type === Description),
+        Link: children.filter(c => c.type === Link),
     }
 
     return (
@@ -67,12 +78,7 @@ export default function CallToAction({children}) {
                             <CompanyContactForm/>
                         </Modal.Content>
                     </Modal>
-                    <a itemProp="url" href="/hizmetlerimiz/sirket-ici-ozel-yazilim" className="text-sm px-6 py-4 hover:bg-brand-primary/25 rounded-full font-semibold leading-6 flex align-center items-center content-center text-brand-primary">
-                        <label>
-                            Detaylı Bilgi Al
-                        </label>
-                        <span className='material-symbols-outlined'>chevron_right</span>
-                    </a>
+                    {Childrens.Link}
                 </div>
             </div>
             {Childrens.Thumbnail}
@@ -84,3 +90,4 @@ export default function CallToAction({children}) {
 CallToAction.Image = Thumbnail;
 CallToAction.Title = Title;
 CallToAction.Description = Description;
+CallToAction.Link = Link;

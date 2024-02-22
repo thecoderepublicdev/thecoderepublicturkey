@@ -65,6 +65,8 @@ export default function ServiceBox({url, children}) {
         Features: children.filter(c => c.type === Features),
     }
 
+    const name = Childrens.Name.map((name) => name.props.children);
+
     return(
         <div className="bg-white border border-gray-200 rounded-xl shadow overflow-hidden">
             <a href="#">
@@ -84,12 +86,15 @@ export default function ServiceBox({url, children}) {
                         <label>Teklif Alın</label>
                     </Modal.Button>
 
-                    <Modal.Title></Modal.Title>
+                    <Modal.Title>{name} İçin Teklif Alın</Modal.Title>
 
                     <Modal.Content>
-                        <ContactForm formType="SERVICE_OFFER" isOfferForm={true} selectedServiceName={Childrens.Name.value}/>
+                        <ContactForm formType="SERVICE_OFFER" isOfferForm={true} selectedServiceName={name}/>
                     </Modal.Content>
                 </Modal>
+                <a href={url} title={name} className="border mt-2 flex justify-center content-center align-center items-center gap-2 hover:bg-gray-50 transition-all ease-in-out font-bold text-brand-primary p-4 rounded-xl w-full">
+                    Detaylı İnceleyin
+                </a>
             </div>
         </div>
 
